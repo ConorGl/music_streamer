@@ -1,4 +1,3 @@
-
 CREATE TABLE pageviews_kafka (
     `url` STRING,
     `user_id` STRING,
@@ -9,7 +8,7 @@ CREATE TABLE pageviews_kafka (
     'topic' = 'pageviews',
     'properties.group.id' = 'demoGroup',
     'scan.startup.mode' = 'earliest-offset',
-    'properties.bootstrap.servers' = 'kafka:19092',
+    'properties.bootstrap.servers' = 'broker:19092',
     'value.format' = 'json',
     'sink.partitioner' = 'fixed'
 );
